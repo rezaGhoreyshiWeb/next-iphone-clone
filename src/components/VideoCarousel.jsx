@@ -1,4 +1,3 @@
-"use client"
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
@@ -7,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 
 import { hightlightsSlides } from "../constants";
 import { pauseImg, playImg, replayImg } from "../utils";
-import Image from "next/image";
 
 const VideoCarousel = () => {
   const videoRef = useRef([]);
@@ -216,7 +214,7 @@ const VideoCarousel = () => {
         </div>
 
         <button className="control-btn">
-          <Image
+          <img
             src={isLastVideo ? replayImg : !isPlaying ? playImg : pauseImg}
             alt={isLastVideo ? "replay" : !isPlaying ? "play" : "pause"}
             onClick={

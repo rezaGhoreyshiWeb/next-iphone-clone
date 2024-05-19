@@ -1,13 +1,10 @@
-"use client"
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import { heroVideo, smallHeroVideo } from '../utils';
 import { useEffect, useState } from 'react';
 
-const heroVideoUrl = "/assets/videos/hero.mp4"
-const smallHeroVideoUrl = "/assets/videos/smallHero.mp4"
-
 const Hero = () => {
-  const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideoUrl : heroVideoUrl)
+  const [videoSrc, setVideoSrc] = useState(window.innerWidth < 760 ? smallHeroVideo : heroVideo)
 
   const handleVideoSrcSet = () => {
     if(window.innerWidth < 760) {
